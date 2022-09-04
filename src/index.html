@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Cursos</title>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,400;0,700;1,200&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="header">
+    <h1>Registro de Cursos</h1>
+    <p class="azul">En el siguiente espacio se registra al curso que se desea participar</p>
+  </div>
+
+  <div class="content">
+
+    <!-- Curso -->
+    <div>
+      <h2>Curso</h2>
+      <div class="content-info">
+        <form>
+          <div class="field">
+            <label>Curso:</label>
+            <input id="nameC" type="text" size=35>
+            <label>Instructor:</label>
+            <input id="instructor" type="text" size=35>
+            <label>Duración:</label>
+            <input id="duration" type="number" size=35>
+          </div>
+          <div class="field">
+            <input id="btnC" type="button" value="Agregar">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- Curso -->
+    <div>
+      <h2>Participante</h2>
+      <div class="content-info">
+        <form>
+          <div class="field">
+            <label>Número de cuenta:</label>
+            <input id="id" type="text" size=35>
+            <label>Nombre:</label>
+            <input id="nameP" type="text" size=35>
+            <label>Curso:</label>
+            <select id="curso">
+              <option value="pendiente">-------------</option>
+          </select>
+            <label>Fecha de Nacimiento:</label>
+            <input id="birthDate" type="date" size=35>
+          </div>
+          <div class="field">
+            <input id="btnP" type="button" value="Agregar">
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Tabla -->
+    <div>
+      <h2>Participantes registrados</h2>
+      <label>Seleccione un Curso:</label>
+            <select id="curso2">
+              <option value="pendiente">-------------</option>
+          </select> 
+          <p id="instructorInfo"></p>
+          <p id="horasInfo"></p>
+      <div class="content-info">
+        <table id="table">
+          <thead>
+          <tr>
+            <th>Número de cuenta</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+    </div>
+    <!-- Tabla -->
+
+  </div>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="main.js" type="module"></script>
+</body>
+
+</html>
